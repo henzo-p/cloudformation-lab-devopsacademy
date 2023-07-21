@@ -34,7 +34,7 @@ Resources:
     Properties:
       VpcId: !Ref HenzoVPC
       CidrBlock: 10.0.0.0/24
-      AvailabilityZone: us-east-1a
+      AvailabilityZone: us-west-1a
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
@@ -47,7 +47,7 @@ Resources:
     Properties:
       VpcId: !Ref HenzoVPC
       CidrBlock: 10.0.1.0/24
-      AvailabilityZone: us-east-1b
+      AvailabilityZone: us-west-1b
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
@@ -94,7 +94,7 @@ Resources:
   MyLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
-      ImageId: ami-0a887e401f7654935
+      ImageId: ami-0d97195686f9b4e77
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref MySecurityGroup
